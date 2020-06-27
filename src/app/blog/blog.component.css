@@ -4,9 +4,26 @@
 
 .wrapper{
     max-width: 35%;
+    background-color: #C37E39;
 }
 
 .fotos{
     width: 100px;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container{
+    background: url("https://cdn.pixabay.com/photo/2019/10/24/20/48/great-dane-4575323_1280.jpg")  no-repeat center center;
+    background-size: 100% 100%;
+    padding-top: 5%; 
+    padding-bottom: 20%;
+}
+
+.jumbotron{
+    background-color:rgb(169,98,36) ;
+}

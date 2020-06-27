@@ -13,9 +13,9 @@ export class HeroComponent implements OnInit {
   heroBtnUrl: string;
   
   constructor() { 
-    this.heroHeading =  "Adventure may hurt you...";
-    this.heroText =  "  but monotony will kill you! Use the opportunity to get to know with us new landscapes, get involved with nature and destiny. Become the real version of yourself! ";
-    this.heroBtnText =  "explore";
+    this.heroHeading =  "Adventure may hurt...";
+    this.heroText =  "  but monotony kills! Use the opportunity to get to know with us new landscapes, get involved with nature and destiny. Become the real version of yourself! ";
+    this.heroBtnText =  "Explore";
     this.heroBtnUrl =  "/travels";
   }
 
