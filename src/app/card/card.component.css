@@ -1,0 +1,17 @@
+.foto{
+    height:45px;
+    width:60px;
+}
+
+.table{
+    max-width: 50%;
+}
+
+.container{
+    background: url("https://cdn.pixabay.com/photo/2020/05/20/15/05/shopping-cart-5196903_960_720.jpg") no-repeat;
+    background-size: 100% ;
+    padding-top: 15%;
+    padding-bottom: 10%;
+  
+
+}

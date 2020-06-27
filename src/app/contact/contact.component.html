@@ -1,0 +1,91 @@
+<div class="container">
+
+
+  <h2 >Get in contact with us! </h2>
+
+
+  <hr>
+
+
+<form class="box" [formGroup]="info" (ngSubmit)="onSubmit()">
+
+  <!-- <div class="row justify-content-center">
+   
+    <div class="col-4"> -->
+
+
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" pattern="[a-zA-Z ]*" />
+
+    <!-- <div *ngIf="info.get('firstName').errors.required && submitted">
+       First Name required
+     </div> -->
+
+    <div *ngIf="info.get('firstName').errors.pattern && submitted">
+      Name must be a string.
+    </div>
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" pattern="[a-zA-Z ]*" />
+    <!-- <div *ngIf="info.get('lastName').errors.required && submitted">
+         LastName is required.
+       </div> -->
+
+    <div *ngIf="info.get('lastName').errors.pattern && submitted">
+      LastName must be a string.
+    </div>
+  </label>
+
+
+<!-- </div>
+<div class="col-4"> -->
+
+
+  <label class= "mr-1">
+    Destination:
+  </label>
+    <input type="text" formControlName="destination" pattern="[a-zA-Z ]*" />
+    <!-- <div *ngIf="info.get('destination').errors.required && submitted">
+          Destination is required.
+       </div> -->
+
+    <div *ngIf="info.get('destination').errors.pattern && submitted">
+      Destination must be a string.
+    </div>
+
+
+
+  
+  <label>
+  
+    Email: 
+  </label>
+    <input type="text" formControlName="email" pattern="[a-zA-Z ]*" />
+    <div *ngIf="info.get('email').errors.required && submitted">
+      Input is required.
+    </div>
+    <div *ngIf="info.get('email').errors.minlength && submitted">
+      Input must be at least 3 characters long.
+    </div>
+
+
+  <input type="submit" class="btn btn-primary" value="Submit" />
+
+
+<br><br><br><br><br><br>
+  <h3>Please leave us a mesage!</h3>
+  <br>
+  
+  <textarea class="form-control" formControlName="text" rows="2"></textarea>
+
+  
+ 
+
+</form>
+
+</div>
+

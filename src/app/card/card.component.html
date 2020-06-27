@@ -1,0 +1,59 @@
+<div class="container">
+<h3>Your Travelbag</h3>
+
+<table class="table table-striped">
+    <tbody>
+
+    <tr *ngFor="let item of items; index as itemID">
+        <td> One Trip to {{ item.destination }}</td>
+        <td><img class="foto" src="{{ item.img }}" alt="imgthumb"></td>
+        <td>{{ item.price | currency }}</td>
+        <!-- <td><input type="submit" class="ml-3 btn-small btn-danger" value="Delete" (click)="onDeleteButton(itemID)"> </td> -->
+    </tr>
+
+
+    <tr>
+        <td></td>
+        <td><b>Total Sum:</b></td>
+        <td><b> {{sum | currency}}</b> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><b>Discount:</b></td>
+        <td><b> {{discount | currency}}</b> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><b>Total Sum after Welcome Discount:</b></td>
+        <td><b> {{newSum| currency}}</b> </td>
+    </tr>
+    </tbody>
+  </table>
+
+<!-- <div *ngFor="let item of items; index as itemID">
+ <span>{{ item.name }} </span>
+ <span>{{ item.price | currency }}</span>
+</div>
+
+<div class="card-item">
+	<h3>Total Sum: € {{sum}}</h3>
+</div> -->
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div>
+        <label>
+        Name
+        </label>
+        <input class="ml-2" id="name" type="text" formControlName="name">
+    </div>
+     
+    <div>
+        <label>
+        Address
+        </label>
+        <input class="ml-2" id="address" type="text" formControlName="address">
+    </div>
+    
+        <button class="btn btn-primary" type="submit">Purchase Now!</button>
+    </form>
+</div>

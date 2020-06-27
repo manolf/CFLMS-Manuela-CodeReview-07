@@ -1,0 +1,24 @@
+<h2>The world is just a few clicks away form you</h2>
+<div class="row container">
+  <div
+    *ngFor="let travel of travels; index as travelId"
+    class="card col-lg-4 col-xs-12 col-md-4 pt-3 pb-3 mt-4 mr-2"
+    style="width: 16rem;"
+  >
+    <h3>
+      <a [routerLink]="['/travels', travelId]">
+        {{ travel.destination }}
+      </a>
+    </h3>
+    <!-- <p *ngIf="travel.description">
+      {{ travel.description }}
+    </p> -->
+    <div class="fotos">
+    <a [routerLink]="['/travels', travelId]">
+  
+    <img src="{{ travel.img }}" alt="{{ travel.destination }}" /></a>
+  </div>
+  </div>
+
+  
+</div>

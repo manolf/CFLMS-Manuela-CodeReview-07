@@ -1,0 +1,59 @@
+
+ <div class="jumbotron">
+	<div  class="container">
+		<h1>what our customers tell...</h1>
+	</div>
+
+</div>
+ 
+ <div class="container flex-row flex-wrap ">
+   
+    <div class="card flex-row flex-wrap wrapper pb-2 mb-2">
+        <div class="card-header border-0">
+            <img class="fotos" src="/assets/img/elefant.JPG" alt="">
+            <p class="card-text">Oliver P.</p><p class="card-text">34 years old</p>
+
+        </div>
+        <div class="card-block px-2 ref">
+            <p class="card-text font-weight-light">date: 14.August 2019 </p>
+            <h5 class="card-title font-weight-bold">Booked Trip: Maledives</h5>
+            <p class="card-text">Thank you so much! It was the best holiday I ever had: Booking services were very easy to use. I booked hotel, flight and a car rental with very little effort and was provided with a variety of different options along the way. </p>
+        </div>
+
+    </div>
+
+
+    <div class="card flex-row flex-wrap wrapper pb-2 mb-2">
+        <div class="card-header border-0">
+            <img class="fotos" src="/assets/img/penguin.jpg" alt="">
+            <p class="card-text">Oliver P.</p><p class="card-text">34 years old</p>
+
+        </div>
+        <div class="card-block px-2 ref">
+            <p class="card-text font-weight-light">date: 14.August 2019 </p>
+            <h5 class="card-title font-weight-bold">Booked Trip: Maledives</h5>
+            <p class="card-text">Thank you so much! It was the best holiday I ever had: Booking services were very easy to use. I booked hotel, flight and a car rental with very little effort and was provided with a variety of different options along the way. </p>
+        </div>
+
+    </div>
+
+
+
+    <div *ngFor="let refs of refs" class="card flex-row flex-wrap pb-2 mb-2 wrapper">
+        <div class="card-header border-0">
+            <img class="fotos" src="{{refs.image}}" alt="icon picture">
+            <p class="card-text">{{refs.name}}</p>
+            <p> {{refs.age}} years old</p>
+
+        </div>
+        <div  class="card-block px-2 ref">
+            <p class="card-text font-weight-light">date: {{refs.date}} </p>
+            <h5 class="card-title font-weight-bold">{{refs.topic}}</h5>
+            <p class="card-text">{{refs.text}} </p>
+        </div> 
+ 
+    </div>
+
+
+
+
