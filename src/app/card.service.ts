@@ -35,11 +35,12 @@ export class CardService {
     else if (sum > 500){
       discount = 0.2;
     } else{
-      discount = 1; //otherwise undefined! 
+      discount = 0;
     }
     console.log("sum = " +sum);
     console.log("discount =" + discount);
-    return (discount*sum);
+    console.log("total discount =" + discount*sum);
+    return (discount*sum).toFixed(2);
 
   }
 

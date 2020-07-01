@@ -3,8 +3,8 @@
 
   <div class="container">
     <div class="card flex-row flex-wrap">
-        <div class="card-header border-0 ">
-            <img class="fotos" src="{{travel.img}}" alt="">
+        <div class="card-header border-0 fotos ">
+            <img src="{{travel.img}}" alt="">
         </div>
         <div class="card-block px-2">
             <h4 class="card-title">{{travel.destination}} - Travel Details</h4>
@@ -13,7 +13,7 @@
             <p class= "card-text"><b>Trip duration:</b> <br> {{ travel.duration }}</p>
             <h4 class="card-text">{{ travel.price | currency }}</h4>
             <button class="btn btn-outline-success my-2 my-sm-0" (click)="addToCard(travel)">Add to Travel Cart</button>
-            <!-- <button class="btn btn-outline-success my-2 my-sm-0" routerLink='/travels/'>Next adventure</button> -->
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" routerLink='/travels/'>Next adventure</button> or back to travels-->
         </div>
         <div class="w-100"></div>
         <div class="card-footer w-100 text-muted">

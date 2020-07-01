@@ -6,6 +6,14 @@
     /* width:100%; */
     object-fit: cover;
 }
+.fotos img{
+    /* height:300px;
+    width: 500px; */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2%;
+   
+}
 
 .wrapper{
     background: url("https://cdn.pixabay.com/photo/2014/03/05/21/12/desert-279862_960_720.jpg") no-repeat;
@@ -22,20 +30,25 @@
 }
 
 
-
-.card-block{
+/* adaptions for mobile-friendlyness */
+/* .card-block{
     max-width:30%;
 }
 
 .card{
     max-width:60%;
-}
+} */
 
 @media screen and (max-width: 480px) {
     /* adaptions for mobile friendlyness*/
-.fotos{
-    width: 400px;
-    height: 300px;
+    .fotos{
+        /* height: 24rem; */
+        max-width: 14rem;
+        min-width: 7rem;
+    }
+
+.wrapper{
+    background: none;
 }
 
 }

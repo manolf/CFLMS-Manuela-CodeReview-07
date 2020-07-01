@@ -1,59 +1,72 @@
 <div class="container">
+<br><hr>
 <h3>Your Travelcart</h3>
 
 <table class="table table-striped">
     <tbody>
 
     <tr *ngFor="let item of items; index as itemID">
-        <td> One Trip to {{ item.destination }}</td>
+        <td> {{ item.destination }}</td>
         <td><img class="foto" src="{{ item.img }}" alt="imgthumb"></td>
-        <td>{{ item.price | currency }}</td>
+        <td><b>{{ item.price }} EUR </b></td>
         <!-- <td><input type="submit" class="ml-3 btn-small btn-danger" value="Delete" (click)="onDeleteButton(itemID)"> </td> -->
     </tr>
+  
 
+    <ng-template [ngIf] ="discount > 0 " [ngIfElse] ="none">
+        <tr>
+            <td></td>
+            <td><b><del>Total Sum:</del></b></td>
+            <td><b><del> {{sum}} </del> EUR</b> </td>
+        </tr>
+        <tr>
+        <td></td>
+        <td class="text-success"><b>Discount:</b></td>
+        <td class="text-success"><b> {{discount}} EUR</b> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="text-success"><b>New Total Sum:</b></td>
+        <td class="text-success"><b> {{newSum}} EUR</b> </td>
+    </tr>
+    </ng-template>
+    <ng-template #none>
+        <tr>
+            <td></td>
+            <td><b>Total Sum:</b></td>
+            <td><b> {{sum}} EUR</b> </td>
+        </tr>
+    </ng-template>
 
-    <tr>
-        <td></td>
-        <td><b>Total Sum:</b></td>
-        <td><b> {{sum | currency}}</b> </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><b>Discount:</b></td>
-        <td><b> {{discount | currency}}</b> </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><b>Total Sum after Welcome Discount:</b></td>
-        <td><b> {{newSum| currency}}</b> </td>
-    </tr>
     </tbody>
   </table>
 
-<!-- <div *ngFor="let item of items; index as itemID">
- <span>{{ item.name }} </span>
- <span>{{ item.price | currency }}</span>
-</div>
+  <br><hr>
 
-<div class="card-item">
-	<h3>Total Sum: € {{sum}}</h3>
+<!-- <div *ngFor="let item of items; index as itemID">
+2do: sum: delete
+     form: validators
 </div> -->
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-    <div>
-        <label>
-        Name
-        </label>
-        <input class="ml-2" id="name" type="text" formControlName="name">
+
+    <h3>Please enter your name and billing address!</h3>
+    <div class="row">
+        <div class="col col-6">
+            <label>Name</label>
+            <input class="col-3 ml-4" id="name" type="text" formControlName="name">
+        </div>
     </div>
-     
-    <div>
-        <label>
-        Address
-        </label>
-        <input class="ml-2" id="address" type="text" formControlName="address">
+
+    <div class="row">
+        <div class="col col-6">
+            <label>Address</label>
+            <input class="col-3 ml-2" id="address" type="text" formControlName="address">
+        </div>
     </div>
-    
+
         <button class="btn btn-primary" type="submit">Purchase Now!</button>
-    </form>
+    
+        </form>
+
 </div>

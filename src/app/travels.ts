@@ -30,5 +30,19 @@ export const travels = [
         startDate: '2021-03-03 14:00',
         description: 'Start in Brisbane, down to East Coast to Sydney, magnetic Island, South Pacific Ocean Road, Uluru: Red Center, West Coast, with Camper and many new friends, Kangaroos, Frazer Island, Whit Sundays',
         img: 'https://cdn.pixabay.com/photo/2019/10/06/05/53/kangaroo-4529327_960_720.jpg'
-}   
+}, {
+    destination: 'Danzig',
+    price: 200,
+    duration: '4days',
+    startDate: '2020-09-09 14:00',
+    description: 'Travel by Train from Vienna to Danzig, Hop-on-hop-off-Adventure: Stops: Brno, Prag, Dresden, Kottbus, Witnica',
+    img: 'https://cdn.pixabay.com/photo/2020/04/30/15/07/gdansk-5113229_960_720.jpg'
+},{
+    destination: 'Kanu Raab - Hungary',
+    price: 499,
+    duration: '4days',
+    startDate: '2020-07-09 06:00',
+    description: 'Travel by Kanu from Szentgotthard to Körmend: everything you need will be on Board: Camping and Cooking outdoor together with 2 gourmet cooks',
+    img: 'https://cdn.pixabay.com/photo/2016/12/08/20/17/nature-1893048_960_720.jpg'
+}
    ];
